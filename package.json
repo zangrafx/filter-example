@@ -1,0 +1,23 @@
+{
+    "author": "zangrafx <zangrafx@gmail.com>",
+    "dependencies": {
+    },
+    "description": "filter",
+    "devDependencies": {
+        "gore-gulp": "0.x",
+        "gulp": "3.x"
+    },
+    "directories": {
+        "dist": "dist",
+        "lib": "src"
+    },
+    "engines": {
+        "node": ">=0.12"
+    },
+    "main": "src",
+    "name": "filter",
+    "scripts": {
+        "test": "gulp test"
+    },
+    "version": "0.0.0"
+}

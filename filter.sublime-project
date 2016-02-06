@@ -1,0 +1,25 @@
+{
+	"SublimeLinter":
+	{
+		"linters":
+		{
+			"eslint":
+			{
+				"@disable": false,
+				"args":
+				[
+					"--config=${project}/node_modules/eslint-config-goreutils/eslint.json"
+				],
+				"excludes":
+				[
+				]
+			}
+		}
+	},
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	]
+}
