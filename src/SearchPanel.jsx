@@ -14,8 +14,8 @@ export default React.createClass({
     "render": function () {
 
         return (
-            <div>
-                <input type="text" onChange={evt => this.handleChange(evt)} />
+            <div className="SearchPanel">
+                Filter: <input type="text" onChange={evt => this.handleChange(evt)} />
             </div>
         );
     }

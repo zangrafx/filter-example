@@ -62,8 +62,13 @@ export default React.createClass({
         }
         return (
             <div>
+                <h1>List of books</h1>
                 <SearchPanel setFilterValue={this.setFilterValue} />
-                <ResultsPanel setSortByValue={this.setSortByValue} Results={Results} />
+                <ResultsPanel
+                    sortBy={this.state.sortBy}
+                    setSortByValue={this.setSortByValue}
+                    Results={Results}
+                />
             </div>
         );
     }

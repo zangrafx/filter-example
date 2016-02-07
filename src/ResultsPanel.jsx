@@ -8,17 +8,29 @@
 import React from "react";
 
 export default React.createClass({
+    "handleClick": function (evt, value) {
+        evt.preventDefault();
+        this.props.setSortByValue(value);
+    },
     "render": function () {
-
+        const DOWNWARDS_ARROW = String.fromCharCode(8595);
         return (
             <table>
                 <thead>
                     <tr>
                         <th>
-                            <strong onClick={() => this.props.setSortByValue("Title")}>Name</strong>
+                            <button
+                                onClick={(evt) => this.handleClick(evt, "Title")}
+                            >
+                                {"Title" + (this.props.sortBy === "Title" ? DOWNWARDS_ARROW : "")}
+                            </button>
                         </th>
                         <th>
-                            <strong onClick={() => this.props.setSortByValue("Author")}>Author</strong>
+                            <button
+                                onClick={(evt) => this.handleClick(evt, "Author")}
+                            >
+                                {"Author" + (this.props.sortBy === "Author" ? DOWNWARDS_ARROW : "")}
+                            </button>
                         </th>
                     </tr>
                 </thead>
