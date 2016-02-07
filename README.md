@@ -1,4 +1,4 @@
-filter
+filter example
 =====================
 
 Example of simple React filter with sorting.

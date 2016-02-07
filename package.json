@@ -2,7 +2,7 @@
     "author": "zangrafx <zangrafx@gmail.com>",
     "dependencies": {
     },
-    "description": "filter",
+    "description": "filter example",
     "devDependencies": {
         "gore-gulp": "0.x",
         "gulp": "3.x"
@@ -15,7 +15,7 @@
         "node": ">=0.12"
     },
     "main": "src",
-    "name": "filter",
+    "name": "filter-example",
     "scripts": {
         "test": "gulp test"
     },

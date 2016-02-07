@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2016, Hypermedia
+ * @license Copyright (c) 2016, zangrafx
  * For licensing, see LICENSE
  */
 
