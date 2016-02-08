@@ -1,23 +1,25 @@
 {
-    "author": "zangrafx <zangrafx@gmail.com>",
-    "dependencies": {
-    },
-    "description": "filter example",
-    "devDependencies": {
-        "gore-gulp": "0.x",
-        "gulp": "3.x"
-    },
-    "directories": {
-        "dist": "dist",
-        "lib": "src"
-    },
-    "engines": {
-        "node": ">=0.12"
-    },
-    "main": "src",
-    "name": "filter-example",
-    "scripts": {
-        "test": "gulp test"
-    },
-    "version": "0.0.0"
+  "author": "zangrafx <zangrafx@gmail.com>",
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  },
+  "description": "filter example",
+  "devDependencies": {
+    "gore-gulp": "0.x",
+    "gulp": "3.x"
+  },
+  "directories": {
+    "dist": "dist",
+    "lib": "src"
+  },
+  "engines": {
+    "node": ">=0.12"
+  },
+  "main": "src",
+  "name": "filter-example",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "version": "0.0.0"
 }
