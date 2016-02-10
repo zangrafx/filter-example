@@ -5,7 +5,7 @@
 
 "use strict";
 
-import Wrapper from "./Wrapper";
+import Wrapper from "src/Wrapper";
 import React from "react";
 import ReactDOM from "react-dom";
 var Books = [

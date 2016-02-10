@@ -6,8 +6,8 @@
 "use strict";
 
 import React from "react";
-import SearchPanel from "./SearchPanel";
-import ResultsPanel from "./ResultsPanel";
+import SearchPanel from "src/SearchPanel";
+import ResultsPanel from "src/ResultsPanel";
 
 export default React.createClass({
     "getInitialState": function () {
