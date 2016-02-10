@@ -35,8 +35,8 @@ export default React.createClass({
                     </tr>
                 </thead>
                 <tbody>
-                    {this.props.Results.map((Result, index) => (
-                        <tr key={index}>
+                    {this.props.Results.map((Result) => (
+                        <tr key={Result.Id}>
                             <td>{Result.Title}</td><td>{Result.Author}</td>
                         </tr>
                     ))}
