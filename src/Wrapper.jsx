@@ -16,6 +16,11 @@ export default React.createClass({
             "sortBy": null
         };
     },
+    "getDefaultProps": function () {
+        return {
+            "Books": React.PropTypes.array.isRequired
+        };
+    },
     "setFilterValue": function (value) {
         this.setState({
             "filter": value
