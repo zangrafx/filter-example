@@ -20,7 +20,7 @@ export default React.createClass({
 
         return (
             <div className="SearchPanel">
-                Filter: <input type="text" onChange={evt => this.handleChange(evt)} />
+                Filter by title: <input type="text" onChange={evt => this.handleChange(evt)} />
             </div>
         );
     }

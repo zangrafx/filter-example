@@ -21,34 +21,37 @@ export default React.createClass({
     },
     "render": function () {
         const DOWNWARDS_ARROW = String.fromCharCode(8595);
-        return (
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            <button
-                                onClick={(evt) => this.handleClick(evt, "Title")}
-                            >
-                                {"Title" + (this.props.sortBy === "Title" ? DOWNWARDS_ARROW : "")}
-                            </button>
-                        </th>
-                        <th>
-                            <button
-                                onClick={(evt) => this.handleClick(evt, "Author")}
-                            >
-                                {"Author" + (this.props.sortBy === "Author" ? DOWNWARDS_ARROW : "")}
-                            </button>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {this.props.Results.map((Result) => (
-                        <tr key={Result.Id}>
-                            <td>{Result.Title}</td><td>{Result.Author}</td>
+        if (this.props.Results.length > 0) {
+            return (
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                <button
+                                    onClick={(evt) => this.handleClick(evt, "Title")}
+                                >
+                                    {"Title" + (this.props.sortBy === "Title" ? DOWNWARDS_ARROW : "")}
+                                </button>
+                            </th>
+                            <th>
+                                <button
+                                    onClick={(evt) => this.handleClick(evt, "Author")}
+                                >
+                                    {"Author" + (this.props.sortBy === "Author" ? DOWNWARDS_ARROW : "")}
+                                </button>
+                            </th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
-        );
+                    </thead>
+                    <tbody>
+                        {this.props.Results.map((Result) => (
+                            <tr key={Result.Id}>
+                                <td>{Result.Title}</td><td>{Result.Author}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            );
+        }
+        return <p>No results.</p>;
     }
 });
