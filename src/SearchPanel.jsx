@@ -8,10 +8,8 @@
 import React from "react";
 
 export default React.createClass({
-    "getDefaultProps": function () {
-        return {
-            "setFilterValue": React.PropTypes.func.isRequired
-        };
+    "propTypes": {
+        "setFilterValue": React.PropTypes.func.isRequired
     },
     "handleChange": function (evt) {
         this.props.setFilterValue(evt.target.value);

@@ -8,12 +8,10 @@
 import React from "react";
 
 export default React.createClass({
-    "getDefaultProps": function () {
-        return {
-            "sortBy": React.PropTypes.string.isRequired,
-            "setSortByValue": React.PropTypes.func.isRequired,
-            "Results": React.PropTypes.array.isRequired
-        };
+    "propTypes": {
+        "sortBy": React.PropTypes.string.isRequired,
+        "setSortByValue": React.PropTypes.func.isRequired,
+        "Results": React.PropTypes.array.isRequired
     },
     "handleClick": function (evt, value) {
         evt.preventDefault();

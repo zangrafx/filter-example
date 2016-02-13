@@ -13,13 +13,11 @@ export default React.createClass({
     "getInitialState": function () {
         return {
             "filter": "",
-            "sortBy": null
+            "sortBy": ""
         };
     },
-    "getDefaultProps": function () {
-        return {
-            "Books": React.PropTypes.array.isRequired
-        };
+    "propTypes": {
+        "Books": React.PropTypes.array.isRequired
     },
     "setFilterValue": function (value) {
         this.setState({
@@ -33,7 +31,7 @@ export default React.createClass({
             });
         } else {
             this.setState({
-                "sortBy": null
+                "sortBy": ""
             });
         }
     },
