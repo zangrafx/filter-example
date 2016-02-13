@@ -25,15 +25,9 @@ export default React.createClass({
         });
     },
     "setSortByValue": function (value) {
-        if (this.props.Books[0].hasOwnProperty(value)) {
-            this.setState({
-                "sortBy": value
-            });
-        } else {
-            this.setState({
-                "sortBy": ""
-            });
-        }
+        this.setState({
+            "sortBy": value
+        });
     },
     "containsFilterValue": function (word, value) {
         return word.indexOf(value) !== -1;
