@@ -14,11 +14,17 @@ export default React.createClass({
     "handleChange": function (evt) {
         this.props.setFilterValue(evt.target.value);
     },
+    "handleClick": function (evt) {
+        evt.preventDefault();
+        this.props.setFilterValue("");
+        this.refs.search.value = "";
+    },
     "render": function () {
 
         return (
             <div className="SearchPanel">
-                Filter by title: <input type="text" onChange={evt => this.handleChange(evt)} />
+                Filter by title: <input ref="search" type="text" onChange={evt => this.handleChange(evt)} />
+                <input type="button" value="Reset" onClick={this.handleClick} />
             </div>
         );
     }
