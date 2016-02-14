@@ -19,29 +19,30 @@ export default React.createClass({
     },
     "render": function () {
         const DOWNWARDS_ARROW = String.fromCharCode(8595);
-        if (this.props.Results.length > 0) {
+        var {Results, sortBy} = this.props;
+        if (Results.length > 0) {
             return (
                 <table>
                     <thead>
                         <tr>
                             <th>
                                 <button
-                                    onClick={(evt) => this.handleClick(evt, "Title")}
+                                    onClick={evt => this.handleClick(evt, "Title")}
                                 >
-                                    {"Title" + (this.props.sortBy === "Title" ? DOWNWARDS_ARROW : "")}
+                                    {"Title" + (sortBy === "Title" ? DOWNWARDS_ARROW : "")}
                                 </button>
                             </th>
                             <th>
                                 <button
-                                    onClick={(evt) => this.handleClick(evt, "Author")}
+                                    onClick={evt => this.handleClick(evt, "Author")}
                                 >
-                                    {"Author" + (this.props.sortBy === "Author" ? DOWNWARDS_ARROW : "")}
+                                    {"Author" + (sortBy === "Author" ? DOWNWARDS_ARROW : "")}
                                 </button>
                             </th>
                         </tr>
                     </thead>
                     <tbody>
-                        {this.props.Results.map((Result) => (
+                        {Results.map(Result => (
                             <tr key={Result.Id}>
                                 <td>{Result.Title}</td><td>{Result.Author}</td>
                             </tr>
