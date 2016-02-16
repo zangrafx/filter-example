@@ -23,7 +23,8 @@ export default React.createClass({
 
         return (
             <div className="SearchPanel">
-                Filter by title: <input ref="search" type="text" onChange={evt => this.handleChange(evt)} />
+                <label htmlFor="search">Filter by title: </label>
+                <input id="search" ref="search" type="text" onChange={evt => this.handleChange(evt)} />
                 <input type="button" value="Reset" onClick={this.handleClick} />
             </div>
         );
