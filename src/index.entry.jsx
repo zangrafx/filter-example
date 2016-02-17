@@ -5,9 +5,9 @@
 
 "use strict";
 
-import Wrapper from "src/Wrapper";
 import React from "react";
 import ReactDOM from "react-dom";
+import Wrapper from "src/Wrapper";
 var Books = [
     {
         "Author": "Juliusz Verne",

@@ -9,9 +9,9 @@ import React from "react";
 
 export default React.createClass({
     "propTypes": {
-        "sortBy": React.PropTypes.string.isRequired,
-        "setSortByValue": React.PropTypes.func.isRequired,
         "Results": React.PropTypes.array.isRequired
+        "setSortByValue": React.PropTypes.func.isRequired,
+        "sortBy": React.PropTypes.string.isRequired,
     },
     "handleClick": function (evt, value) {
         evt.preventDefault();

@@ -6,8 +6,8 @@
 "use strict";
 
 import React from "react";
-import SearchPanel from "src/SearchPanel";
 import ResultsPanel from "src/ResultsPanel";
+import SearchPanel from "src/SearchPanel";
 
 export default React.createClass({
     "getInitialState": function () {
@@ -62,9 +62,9 @@ export default React.createClass({
                 <h1>List of books</h1>
                 <SearchPanel setFilterValue={this.setFilterValue} />
                 <ResultsPanel
-                    sortBy={this.state.sortBy}
-                    setSortByValue={this.setSortByValue}
                     Results={Results}
+                    setSortByValue={this.setSortByValue}
+                    sortBy={this.state.sortBy}
                 />
             </div>
         );
