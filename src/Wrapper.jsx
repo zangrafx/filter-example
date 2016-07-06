@@ -9,35 +9,33 @@ import React from "react";
 import ResultsPanel from "src/ResultsPanel";
 import SearchPanel from "src/SearchPanel";
 
-export default React.createClass({
-    "getInitialState": function () {
-        return {
-            "filter": "",
-            "sortBy": ""
-        };
-    },
-    "propTypes": {
+export default class Wrapper extends React.Component {
+    static propTypes = {
         "Books": React.PropTypes.array.isRequired
-    },
-    "setFilterValue": function (value) {
+    };
+    state = {
+        "filter": "",
+        "sortBy": ""
+    };
+    setFilterValue = value => {
         this.setState({
             "filter": value
         });
-    },
-    "setSortByValue": function (value) {
+    };
+    setSortByValue = value => {
         this.setState({
             "sortBy": value
         });
-    },
-    "containsFilterValue": function (word, value) {
+    };
+    containsFilterValue = (word, value) => {
         return word.indexOf(value) !== -1;
-    },
-    "filterList": function (list) {
+    };
+    filterList = list => {
         return list.filter(
             element => this.containsFilterValue(element.Title.toLowerCase(), this.state.filter)
         );
-    },
-    "sortList": function (list) {
+    };
+    sortList = list => {
         return list.sort(
             (a, b) => {
                 var A = a[this.state.sortBy].toLowerCase();
@@ -51,8 +49,8 @@ export default React.createClass({
                 return 0;
             }
         );
-    },
-    "render": function () {
+    };
+    render() {
         var Results = this.filterList(this.props.Books);
         if (this.state.sortBy && Results) {
             Results = this.sortList(Results);
@@ -69,5 +67,4 @@ export default React.createClass({
             </div>
         );
     }
-});
-
+}

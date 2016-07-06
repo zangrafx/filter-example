@@ -7,17 +7,17 @@
 
 import React from "react";
 
-export default React.createClass({
-    "propTypes": {
+export default class ResultsPanel extends React.Component {
+    static propTypes = {
         "Results": React.PropTypes.array.isRequired,
         "setSortByValue": React.PropTypes.func.isRequired,
         "sortBy": React.PropTypes.string.isRequired
-    },
-    "handleClick": function (evt, value) {
+    };
+    handleClick = (evt, value) => {
         evt.preventDefault();
         this.props.setSortByValue(value);
-    },
-    "render": function () {
+    };
+    render() {
         const DOWNWARDS_ARROW = String.fromCharCode(8595);
         var {Results, sortBy} = this.props;
         if (Results.length > 0) {
@@ -53,4 +53,4 @@ export default React.createClass({
         }
         return <p>No results.</p>;
     }
-});
+}
