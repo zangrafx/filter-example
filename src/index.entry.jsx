@@ -8,6 +8,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Wrapper from "src/Wrapper";
+import {observable} from "mobx";
+
 var Books = [
     {
         "Author": "Juliusz Verne",
@@ -35,4 +37,18 @@ var Books = [
         "Id": "a0f1490a20d0211c997b44bc357e1972deab8ae3"
     }
 ];
-ReactDOM.render(<Wrapper Books={Books} />, document.getElementById("app"));
+
+var appState = observable({
+    "filter": "",
+    "sortBy": ""
+});
+
+appState.setFilterValue = function (value) {
+    appState.filter = value;
+};
+
+appState.setSortByValue = function (value) {
+    appState.sortBy = value;
+};
+
+ReactDOM.render(<Wrapper Books={Books} appState={appState} />, document.getElementById("app"));
