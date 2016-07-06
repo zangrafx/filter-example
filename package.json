@@ -7,7 +7,7 @@
   "description": "filter example",
   "devDependencies": {
     "gore-gulp": "0.x",
-    "gulp": "3.x"
+    "gulp": "3.9.1"
   },
   "directories": {
     "dist": "dist",
