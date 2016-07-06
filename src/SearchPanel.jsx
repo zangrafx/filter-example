@@ -7,19 +7,17 @@
 
 import React from "react";
 
-export default React.createClass({
-    "propTypes": {
+export default class SearchPanel extends React.Component {
+    static propTypes = {
         "setFilterValue": React.PropTypes.func.isRequired
-    },
-    "handleChange": function (evt) {
-        this.props.setFilterValue(evt.target.value);
-    },
-    "handleClick": function (evt) {
+    };
+    handleChange = evt => this.props.setFilterValue(evt.target.value);
+    handleClick = evt => {
         evt.preventDefault();
         this.props.setFilterValue("");
         this.refs.search.value = "";
-    },
-    "render": function () {
+    };
+    render() {
 
         return (
             <div className="SearchPanel">
@@ -29,4 +27,4 @@ export default React.createClass({
             </div>
         );
     }
-});
+}
